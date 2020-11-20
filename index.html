@@ -30,19 +30,19 @@
             list-style-image: url(lin.gif);
         }
 
-        A:link {
+        a:link {
             text-decoration: none;
         }
 
-        A:visited {
+        a:visited {
             text-decoration: none;
         }
 
-        A:active {
+        a:active {
             text-decoration: none;
         }
 
-        A:hover {
+        a:hover {
             font-size: 24px;
             font-weight: bold;
             color: red;
@@ -57,6 +57,32 @@
             font-family: "Times New Roman", Times, serif;
             font-size: 200%;
             color: red;
+        }
+
+        a.linker:hover {
+            padding-left: 20px;
+            -webkit-transition: background-image 2s ease-in-out;
+            transition: background-image 2s ease-in-out;
+        }
+
+        a.linker:hover::before {
+            opacity: 1;
+            transition: 2s;
+        }
+
+        a.linker::before {
+            content: "\00a0\00a0\00a0";
+            background-image: url(lin.gif);
+            background-image: url(lin.gif);
+            background-repeat: no-repeat;
+            background-repeat: no-repeat;
+            padding-left: 20px;
+            opacity: 0;
+            transition: 4s;
+        }
+        .mans{
+            margin-bottom: 20px;
+            vertical-align: -20%;
         }
     </style>
 </head>
@@ -77,6 +103,16 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo voluptate repudiandae, nam recusandae quidem
         error in sed aspernatur numquam perferendis debitis eum iusto quibusdam provident consequatur molestiae at
         perspiciatis?</p>
+    <br />
+    <a href="https://www.youtube.com/watch?v=jU3SMH98bYA" class="linker">Текст меню1</a>
+    <br />
+    <a href="https://www.youtube.com/watch?v=jU3SMH98bYA" class="linker">Текст меню2</a>
+    <br />
+    <a href="https://www.youtube.com/watch?v=jU3SMH98bYA" class="linker">Текст меню3</a>
+    <br/>
+    <a href="https://www.youtube.com/watch?v=jU3SMH98bYA" class="mans">Текст меню1</a>
+    <a href="https://www.youtube.com/watch?v=jU3SMH98bYA" class="mans">Текст меню2</a>
+    <a href="https://www.youtube.com/watch?v=jU3SMH98bYA" class="mans">Текст меню3</a>
 </body>
 
 </html>
